@@ -25,7 +25,16 @@ public class wizard
         Console.WriteLine($"Sisa energi {enemy.namawizard}: {enemy.energy}");
         Console.WriteLine();
     }
+    
+    public void heal()
+    {
+        energy += 5;
+        if (energy >= 100) ;
 
+        Console.Write($"{namawizard} menambah heal +++++");
+        Console.Write($"heal {namawizard} saat ini adalah: {energy}");
+
+    }
    
     public void ShowStats()
     {
@@ -51,6 +60,11 @@ class Program
 
         wizard1.ShowStats();
         wizard2.ShowStats();
+        Console.WriteLine();
+
+        wizard1.heal();
+        wizard2.heal();
+        
 
     }
 
